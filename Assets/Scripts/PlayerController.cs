@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
+
 	private Rigidbody rb;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
 	}
+
   	void FixedUpdate()
 	{
+
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
@@ -19,6 +21,4 @@ public class NewBehaviourScript : MonoBehaviour
 
 		rb.AddForce (movement);
 	}
-    // Update is called once per frame
-    
 }
